@@ -16,6 +16,7 @@ body {
   background: rgba(255, 255, 255, 0.86);
   padding: 5px;
   border-radius: 10px;
+	text-align: center;
 }
 
 .main-container h1 {
@@ -25,6 +26,9 @@ body {
 .text-box {
   margin: 0px auto;
   width: 40%;
+}
+select {
+	margin: 0 auto;
 }
 
 p{

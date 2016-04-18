@@ -22,7 +22,7 @@ app.service('parseService', function($http){
 		return $http ({
 			method: 'POST',
 			url: 'https://api.parse.com/1/classes/chat',
-			data: {message} //tells parse the data we are sending it. in this case an object with key of text and value of yourMessage
+			data: {text: message} //tells parse the data we are sending it. in this case an object with key of text and value of yourMessage
 		}).then(function(response) {
 			console.log(response);
 			return response.config.data;
@@ -36,7 +36,7 @@ app.service('parseService', function($http){
 			method: 'GET',
 			url: 'https://api.parse.com/1/classes/chat?order=-createdAt'
 		}).then(function(response) {
-//			console.log(response);
+			//console.log(response);
 			return response.data.results;
 		})
 	}

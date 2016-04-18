@@ -6,6 +6,21 @@ app.controller('mainCtrl', function($scope, parseService){
   //The getParseData function will call the getData method on the parseService object. You'll then save the result of that request to 
   //your controllers $scope as messages ($scope.messages)
 
+	$scope.sortByDate = true;
+	
+	$scope.sortOptions = [
+		{
+			display: 'Earliest',
+			value: false
+		},
+		{
+			display: 'Latest',
+			value: true
+		}
+	];
+
+	
+	
 	$scope.getData = function() {
 		parseService.getData().then(function(response){
 //			console.log(response)
@@ -30,7 +45,7 @@ app.controller('mainCtrl', function($scope, parseService){
 
   //uncomment this code when your getParseData function is finished
   //This goes and gets new data every second, which mimicking a chat room experience.
-   setInterval(function(){
-     $scope.getData();
-   }, 1500)
+//   setInterval(function(){
+//     $scope.getData();
+//   }, 1500)
 })
